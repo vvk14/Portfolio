@@ -1,0 +1,175 @@
+html {
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000; /* Black background */
+    color: #f9d342; /* Gold text */
+  }
+
+  header {
+    background-color: #1a1a1a; /* Darker black for header */
+    color: #f9d342; /* Gold color for text */
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  h1{
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: #f9d342;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    color: #d4af37; /* Slightly lighter gold on hover */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  section {
+    margin: 50px 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .about, .projects, .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .about p, .contact p {
+    flex: 1;
+    margin-right: 20px;
+    line-height: 1.6;
+  }
+
+  .about img, .contact img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 223, 0, 0.5); /* Gold glow effect */
+  }
+
+  .projects .project-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: slideUp 1s ease-in-out;
+  }
+  .shopify-icon {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shopify-icon img {
+    max-width: 70px;
+    margin: 10px;
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #f9d342;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+
+  .contact-form input[type="submit"] {
+    background-color: #f9d342;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    background-color: #d4af37;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #f9d342;
+  }
+
+  @media (max-width: 768px) {
+    .about, .projects, .contact {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about img, .contact img {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
